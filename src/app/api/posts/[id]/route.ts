@@ -1,7 +1,7 @@
 import { getPostbyID } from "@/lib/actions/post.actions";
-import { NextApiRequest } from "next";
+import { NextRequest } from "next/server";
 
-export async function GET(req: NextApiRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
     const { id } = params;
     try {
         const post = await getPostbyID(id);
