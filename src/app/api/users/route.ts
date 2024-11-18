@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { getUsers } from "@/lib/actions/user.actions";
-import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
-export async function GET(res: NextResponse) {
+export async function GET(req: NextRequest) {
     const users = await getUsers();
-    return new NextResponse(JSON.stringify(users), {status: 200});
+    return new Request (JSON.stringify(users), {status: 200});
 }
