@@ -4,5 +4,5 @@ import { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
     const users = await getUsers();
-    return new Request (JSON.stringify(users), {status: 200});
+    return new Request (JSON.stringify(users));
 }
