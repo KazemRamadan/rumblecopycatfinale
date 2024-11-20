@@ -1,4 +1,4 @@
-import { HomeIcon, Signature, UsersRound, LogOut, SquareChartGantt } from 'lucide-react';
+import { HomeIcon, Signature, UsersRound, LogOut, SquareChartGantt, UserRoundCheck } from 'lucide-react';
 import Link from 'next/link';
 
 import { NavButton } from '@/components/NavButton';
@@ -23,6 +23,7 @@ export function Header() {
                 </div>
                 <div className='flex items-center'>
                     <NavButton href='/authors' label='Authors' icon={Signature} />
+                    <NavButton href='/followers' label='Followers' icon={UserRoundCheck} />
                     <NavButton href='/users' label='Users' icon={UsersRound} />
                     <NavButton href='https://copycat-roadmap.vercel.app/' label='Feature Request' icon={SquareChartGantt} />
                     <ModeToggle/>

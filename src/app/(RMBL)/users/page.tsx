@@ -20,7 +20,7 @@ type Users = {
 };
 
 async function UsersPage() {
-  const data = await fetch('https://rumblecopycat.vercel.app/api/users');
+  const data = await fetch('http://localhost:3000/api/users');
   const users: Users[] = await data.json();
 
   return (

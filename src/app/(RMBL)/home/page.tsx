@@ -14,7 +14,7 @@ export type Post = {
 };
 
 async function HomePage() {
-  const data = await fetch("https://rumblecopycat.vercel.app/api/posts");
+  const data = await fetch("http://localhost:3000/api/posts");
   const posts: Post[] = await data.json();
 
   return (

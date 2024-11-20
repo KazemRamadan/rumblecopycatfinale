@@ -16,7 +16,7 @@ export async function GET() {
 
         await updateUser(user.id, user.given_name || '', user.email || '');
 
-        return NextResponse.redirect('https://rumblecopycat.vercel.app/home');
+        return NextResponse.redirect('http:localhost:3000/home');
     } catch (error) {
         console.error("Error in GET handler:", error);
         return NextResponse.json(
