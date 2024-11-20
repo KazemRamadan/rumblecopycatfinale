@@ -18,15 +18,17 @@
 ### Users
 
 - `GET /api/users` - Get all users (Used in `src/lib/actions/user.actions.ts` to retrieve a list of users)
-- `PUT /api/users/:id` - Update a user (Used in `src/lib/actions/user.actions.ts` to update a user's information)
+- `POST /api/users` - Insert users (Used in `src/lib/actions/user.actions.ts` to check if the the user exists and insert it in the db in case they're not)
 
 ### Posts
 
 - `GET /api/posts` - Get all posts (Used in `src/lib/actions/post.actions.ts` to retrieve a list of posts)
-- `GET /api/posts/:id` - Get a post by ID (Used in `src/lib/actions/post.actions.ts` to retrieve a specific post)
+- `GET /api/users/myposts` - Get my posts (Used in `src/lib/actions/posts.actions.ts` to retrieve a list posts you've created)
 - `POST /api/posts` - Create a new post (Used in `src/lib/actions/post.actions.ts` to create a new post)
-- `PUT /api/posts/:id` - Update a post (Not currently used in the provided code)
-- `DELETE /api/posts/:id` - Delete a post (Not currently used in the provided code)
+
+### Follow
+- `GET /api/follow` - Get my followers (Used in `src/lib/actions/user.actions.ts` to retrieve a list of your follower)
+- `POST /api/follow` - Follow a user (Used in `src/lib/actions/user.actions.ts` to follow someone by their id)
 
 
 
